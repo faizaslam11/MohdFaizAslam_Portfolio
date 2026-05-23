@@ -199,7 +199,7 @@ primaryNav.querySelectorAll("a").forEach((link) => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 720) {
+  if (window.innerWidth > 980) {
     setMenuOpen(false);
   }
 });
