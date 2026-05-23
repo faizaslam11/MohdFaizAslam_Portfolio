@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Mohd Faiz Aslam - Senior Software Engineer portfolio for Java, Spring Boot, Microservices, Kafka, Cloud, DevOps, Python, React, Angular, and GenAI-assisted development.">
+    <title>Mohd Faiz Aslam | Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Mohd Faiz Aslam home">
+        <span class="brand-mark">MF</span>
+        <span>Mohd Faiz Aslam</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">
+        <i data-lucide="moon"></i>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Senior Software Engineer - Java, Spring Boot, Microservices, GenAI</p>
+          <h1>Building secure, scalable enterprise systems that stay fast under pressure.</h1>
+          <p class="hero-summary">
+            I am a senior full-stack engineer with 4.6+ years of experience across healthcare and enterprise platforms,
+            specializing in Spring Boot microservices, Kafka event flows, secure REST APIs, cloud deployments, production
+            support, and AI-assisted development.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="assets/MohdFaiz_Aslam_Resume.pdf" target="_blank" rel="noreferrer">
+              <i data-lucide="file-text"></i>
+              Resume
+            </a>
+            <a class="button secondary" href="https://www.github.com/faizaslam11" target="_blank" rel="noreferrer">
+              <i data-lucide="code-2"></i>
+              GitHub
+            </a>
+            <a class="button secondary" href="https://www.linkedin.com/in/mohd-faiz-aslam-49551b194/" target="_blank" rel="noreferrer">
+              <i data-lucide="external-link"></i>
+              LinkedIn
+            </a>
+            <a class="button ghost" href="mailto:faizaslam10@gmail.com">
+              <i data-lucide="mail"></i>
+              Email
+            </a>
+          </div>
+          <div class="quick-stats" aria-label="Career highlights">
+            <article>
+              <strong>4.6+</strong>
+              <span>Years engineering production systems</span>
+            </article>
+            <article>
+              <strong>30%</strong>
+              <span>API latency reduction through service optimization</span>
+            </article>
+            <article>
+              <strong>4</strong>
+              <span>Deployment environments managed: DEV, TEST, UAT, PROD</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="portrait-panel reveal">
+          <img src="assets/mohd-faiz-aslam.jpg" alt="Mohd Faiz Aslam">
+          <div class="availability-card">
+            <span class="pulse"></span>
+            <div>
+              <strong>Open to senior engineering opportunities</strong>
+              <small>Backend, full stack, cloud, microservices, GenAI productivity</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section impact-strip" aria-label="Core impact areas">
+        <button class="impact-item active" type="button" data-focus="backend">
+          <i data-lucide="server"></i>
+          Backend Architecture
+        </button>
+        <button class="impact-item" type="button" data-focus="cloud">
+          <i data-lucide="cloud"></i>
+          Cloud Delivery
+        </button>
+        <button class="impact-item" type="button" data-focus="ai">
+          <i data-lucide="sparkles"></i>
+          GenAI Acceleration
+        </button>
+        <button class="impact-item" type="button" data-focus="frontend">
+          <i data-lucide="layout-dashboard"></i>
+          UI Integration
+        </button>
+      </section>
+
+      <section class="section split" id="expertise">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Skills recruiters can scan fast</p>
+          <h2>Demand-ready skill set across backend, cloud, DevOps, frontend, and AI-assisted delivery.</h2>
+          <p>
+            Use the filters to see how the stack clusters. Every skill below is pulled from the resume and organized for hiring teams.
+          </p>
+        </div>
+        <div class="skills-workbench reveal">
+          <div class="filter-row" aria-label="Skill filters">
+            <button class="filter active" type="button" data-filter="all">All</button>
+            <button class="filter" type="button" data-filter="backend">Backend</button>
+            <button class="filter" type="button" data-filter="ai">AI</button>
+            <button class="filter" type="button" data-filter="cloud">Cloud</button>
+            <button class="filter" type="button" data-filter="frontend">Frontend</button>
+            <button class="filter" type="button" data-filter="tools">Tools</button>
+          </div>
+          <div class="skill-grid" id="skillGrid"></div>
+        </div>
+      </section>
+
+      <section class="section system-map reveal" aria-label="Engineering system map">
+        <div>
+          <p class="eyebrow">How I think about systems</p>
+          <h2>From API design to deployment and production observability.</h2>
+        </div>
+        <div class="map-canvas">
+          <button class="map-node" type="button" style="--x: 9%; --y: 38%" data-map="ui">React / Angular UI</button>
+          <button class="map-node" type="button" style="--x: 30%; --y: 18%" data-map="api">REST APIs + JWT</button>
+          <button class="map-node" type="button" style="--x: 52%; --y: 44%" data-map="services">Spring Boot Services</button>
+          <button class="map-node" type="button" style="--x: 69%; --y: 17%" data-map="kafka">Kafka Consumers</button>
+          <button class="map-node" type="button" style="--x: 26%; --y: 70%" data-map="database">PostgreSQL / MySQL</button>
+          <button class="map-node" type="button" style="--x: 57%; --y: 74%" data-map="cloud">AWS + Azure CI/CD</button>
+          <button class="map-node" type="button" style="--x: 72%; --y: 61%" data-map="observability">Kibana / CloudWatch</button>
+          <svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M18 43 C27 32, 30 30, 38 25"></path>
+            <path d="M42 25 C49 31, 53 36, 58 45"></path>
+            <path d="M64 43 C70 35, 74 29, 80 23"></path>
+            <path d="M58 55 C48 63, 42 68, 35 74"></path>
+            <path d="M64 56 C66 64, 66 69, 69 76"></path>
+            <path d="M74 71 C79 68, 82 65, 86 64"></path>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Project experience</p>
+          <h2>Enterprise projects with measurable engineering outcomes.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="card-top">
+              <span>Oct 2021 - Dec 2024</span>
+              <i data-lucide="activity"></i>
+            </div>
+            <h3>Philips ITAAP - Enterprise Microservices Ecosystem</h3>
+            <p>
+              Large-scale enterprise platform supporting Philips internal systems with secure microservices,
+              Kafka consumers, API hardening, performance optimization, and Angular/React UI integrations.
+            </p>
+            <ul>
+              <li>Designed Kafka consumer microservices for asynchronous communication.</li>
+              <li>Built JWT-secured REST APIs with pagination, filtering, validation, and global error handling.</li>
+              <li>Reduced API response time by around 30% through service-layer optimization.</li>
+              <li>Integrated SonarQube and Azure YAML pipelines for quality and deployment automation.</li>
+            </ul>
+          </article>
+          <article class="project-card reveal">
+            <div class="card-top">
+              <span>Jan 2025 - Present</span>
+              <i data-lucide="cpu"></i>
+            </div>
+            <h3>Caterpillar - Enterprise Full Stack Modernization</h3>
+            <p>
+              Distributed microservices architecture using Spring Boot, PostgreSQL, Kafka, AWS EC2, S3, Kibana,
+              CloudWatch, Python automation, and GenAI-assisted backend productivity.
+            </p>
+            <ul>
+              <li>Architected scalable backend modules and secure API flows.</li>
+              <li>Supported environment-based deployments across DEV, TEST, UAT, and PROD.</li>
+              <li>Diagnosed production incidents and improved system stability.</li>
+              <li>Mentored junior developers and collaborated with onshore architects.</li>
+            </ul>
+          </article>
+          <article class="project-card personal reveal">
+            <div class="card-top">
+              <span>Personal Projects</span>
+              <i data-lucide="code-2"></i>
+            </div>
+            <h3>Explore my GitHub portfolio</h3>
+            <p>
+              Recruiters can view my personal work, experiments, and code samples on GitHub.
+            </p>
+            <a class="button primary" href="https://www.github.com/faizaslam11" target="_blank" rel="noreferrer">
+              <i data-lucide="external-link"></i>
+              github.com/faizaslam11
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split" id="experience">
+        <div class="section-intro reveal">
+          <p class="eyebrow">Professional journey</p>
+          <h2>LTIMindtree senior engineer trusted with architecture, delivery, incidents, and mentoring.</h2>
+          <p>
+            Currently working as Senior Software Engineer in Noida, India, contributing to enterprise-grade platforms
+            since October 2021.
+          </p>
+        </div>
+        <div class="timeline reveal">
+          <article class="timeline-item">
+            <span class="time">Oct 2021 - Present</span>
+            <h3>Senior Software Engineer - LTIMindtree</h3>
+            <p>
+              Designed Spring Boot microservices, implemented secure REST APIs, built Kafka integrations, contributed
+              to Azure CI/CD, managed deployments, resolved production incidents, and mentored developers.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section credentials" id="credentials">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Certificates and recognition</p>
+          <h2>Cloud credentials and delivery recognition that support the hands-on engineering story.</h2>
+        </div>
+        <div class="credential-grid">
+          <article class="credential-card reveal">
+            <i data-lucide="badge-check"></i>
+            <span>2025</span>
+            <h3>AWS Certified Developer - Associate</h3>
+            <p>Developer-level AWS credential aligned with EC2, S3, backend deployment, and modernization work.</p>
+          </article>
+          <article class="credential-card reveal">
+            <i data-lucide="cloud-cog"></i>
+            <span>2023</span>
+            <h3>AWS Cloud Practitioner</h3>
+            <p>Cloud foundation across AWS services, deployment concepts, and cloud-native delivery.</p>
+          </article>
+          <article class="credential-card reveal">
+            <i data-lucide="shield-check"></i>
+            <span>2022</span>
+            <h3>Azure Fundamentals</h3>
+            <p>Azure foundation supporting CI/CD pipeline work and cloud environment understanding.</p>
+          </article>
+          <article class="credential-card reveal">
+            <i data-lucide="trophy"></i>
+            <span>Award</span>
+            <h3>Super Crew and Trailblazer Award</h3>
+            <p>Honoured for consistently going above and beyond in project execution and teamwork.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section education reveal" id="education">
+        <div>
+          <p class="eyebrow">Education</p>
+          <h2>Formal software education paired with enterprise engineering practice.</h2>
+        </div>
+        <div class="education-grid">
+          <article>
+            <span>Nov 2025</span>
+            <h3>M.Tech in Software Engineering</h3>
+            <p>BITS Pilani (WILP)</p>
+          </article>
+          <article>
+            <span>Sept 2021</span>
+            <h3>Bachelor in Computer Applications</h3>
+            <p>Aligarh College of Engineering & Technology</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Recruiter-ready contact</p>
+          <h2>Let us talk about scalable backend systems, modernization, or GenAI-assisted engineering.</h2>
+        </div>
+        <div class="contact-actions reveal">
+          <a class="contact-link" href="mailto:faizaslam10@gmail.com">
+            <i data-lucide="mail"></i>
+            faizaslam10@gmail.com
+          </a>
+          <a class="contact-link" href="tel:+918171011960">
+            <i data-lucide="phone"></i>
+            +91-8171011960
+          </a>
+          <a class="contact-link" href="https://www.github.com/faizaslam11" target="_blank" rel="noreferrer">
+            <i data-lucide="code-2"></i>
+            GitHub
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/mohd-faiz-aslam-49551b194/" target="_blank" rel="noreferrer">
+            <i data-lucide="external-link"></i>
+            LinkedIn
+          </a>
+          <a class="contact-link" href="assets/MohdFaiz_Aslam_Resume.pdf" target="_blank" rel="noreferrer">
+            <i data-lucide="download"></i>
+            Download resume
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>Built with love by Mohd Faiz Aslam</span>
+    </footer>
+    <div class="map-popover" id="mapPopover" hidden>
+      <div class="map-popover-card" role="dialog" aria-modal="true" aria-labelledby="mapPopoverTitle">
+        <button class="icon-button map-close" type="button" aria-label="Close system detail">
+          <i data-lucide="x"></i>
+        </button>
+        <span id="mapPopoverKicker"></span>
+        <h3 id="mapPopoverTitle"></h3>
+        <p id="mapPopoverText"></p>
+      </div>
+    </div>
+  </body>
+</html>
