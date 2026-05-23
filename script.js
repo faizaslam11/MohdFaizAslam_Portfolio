@@ -41,6 +41,8 @@ const grid = document.querySelector("#skillGrid");
 const filters = document.querySelectorAll(".filter");
 const progress = document.querySelector(".progress");
 const themeToggle = document.querySelector("#themeToggle");
+const menuToggle = document.querySelector("#menuToggle");
+const primaryNav = document.querySelector("#primaryNav");
 const focusButtons = document.querySelectorAll(".impact-item");
 const mapNodes = document.querySelectorAll(".map-node");
 const mapPopover = document.querySelector("#mapPopover");
@@ -179,6 +181,26 @@ themeToggle.addEventListener("click", () => {
   themeToggle.innerHTML = `<i data-lucide="${isLight ? "sun" : "moon"}"></i>`;
   if (window.lucide) {
     window.lucide.createIcons();
+  }
+});
+
+function setMenuOpen(isOpen) {
+  primaryNav.classList.toggle("is-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+}
+
+menuToggle.addEventListener("click", () => {
+  setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true");
+});
+
+primaryNav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMenuOpen(false));
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 720) {
+    setMenuOpen(false);
   }
 });
 

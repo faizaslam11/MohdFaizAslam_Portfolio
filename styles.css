@@ -86,6 +86,12 @@ button {
   backdrop-filter: blur(18px);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .brand,
 nav,
 .hero-actions,
@@ -133,6 +139,40 @@ nav a:hover,
   background: var(--panel);
   color: var(--text);
   cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform 240ms ease, opacity 180ms ease, width 240ms ease;
+}
+
+.menu-toggle span + span {
+  margin-top: 5px;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 .section {
@@ -775,15 +815,56 @@ h3 {
 
 @media (max-width: 720px) {
   .site-header {
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 
   nav {
     order: 3;
     width: 100%;
-    overflow-x: auto;
-    padding-bottom: 4px;
+    display: grid;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    border: 0 solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: max-height 280ms ease, opacity 220ms ease, transform 220ms ease, border-width 220ms ease, padding 220ms ease;
+  }
+
+  nav::before {
+    display: none;
+  }
+
+  nav a {
+    min-height: 44px;
+    padding: 0 14px;
+    border-top: 1px solid var(--line);
+  }
+
+  nav a:first-child {
+    border-top: 0;
+  }
+
+  nav.is-open {
+    max-height: 320px;
+    padding: 8px;
+    border-width: 1px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav.is-open a {
+    display: flex;
+    align-items: center;
   }
 
   h1 {
